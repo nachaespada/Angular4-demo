@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+	  <div class="col-md-6 offset-md-3">
+	  	<p>
+		   {{newcomponent}}
+			</p>
+			<h3>Custom Pipe</h3>
+			<b>Square root of 25 is: {{25 | sqrt}}</b>
+			<p>
+			   Today's datetime : {{todaydate | date : 'shortTime'}} {{newcomponentproperty}}
+			</p>
+	  	Filter by name <input class="form-control" type="text" (change) = "changeIndex($event)">
+		  <ul *ngFor = "let data of filteredHttpdata">
+		     <li>Name : {{data.name}} Address: {{data.address.city}}</li>
+		  </ul>
+	  </div>
+	</div>
+</div>
